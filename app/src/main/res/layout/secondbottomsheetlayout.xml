@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottomsheet_round_bg_lightest"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/font_h1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_btm"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/fontmain"
+            android:gravity="start"
+            android:letterSpacing="0.01"
+            android:text="@string/where_should_we_send_the_money"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Description Text -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_btm"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/mainfont_light"
+            android:gravity="start"
+            android:letterSpacing="0.01"
+            android:text="@string/amount_will_be_credited_to_this_account_emi_will_also_be_debited_from_this_bank_account"
+            android:textColor="#566976"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/plansRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbarThumbVertical="@color/orange_200"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/bank_account_item" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/createPlanButton"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/button_bg_outline_white"
+                    android:fontFamily="@font/fontmain"
+                    android:text="Change account"
+                    android:textAllCaps="false"
+                    android:textColor="#D7D7D7"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+        <!-- Proceed Button -->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/fontmain"
+            android:text="Tap for 1-click KYC"
+            android:textAllCaps="false"
+            android:textColor="@color/cta_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

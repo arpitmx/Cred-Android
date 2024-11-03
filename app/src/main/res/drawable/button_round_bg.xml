@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <solid android:color="@color/tirtiary_base" />
+
+    <!-- Curved corners on top-left and top-right only -->
+    <corners
+        android:topLeftRadius="150dp"
+        android:topRightRadius="150dp"
+        android:bottomLeftRadius="150dp"
+        android:bottomRightRadius="150dp" />
+</shape>

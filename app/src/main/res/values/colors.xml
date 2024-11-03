@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_base">#0C1115</color>
+    <color name="secondary_base">#0F131A</color>
+    <color name="tirtiary_base">#161B20</color>
+
+    <color name="cta_primary">#FEC8BE</color>
+
+    <color name="secondary_text">#3C4A53</color>
+    <color name="primary_text">#7E9AA6</color>
+    <color name="green_text">#7DAB78</color>
+    <color name="gray_100">#B4B7B4</color>
+    <color name="orange_200">#D68162</color>
+    <color name="orange_100">#FEE6DB</color>
+
+
+
+</resources>

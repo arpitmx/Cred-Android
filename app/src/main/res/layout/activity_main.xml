@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_base"
+    tools:context=".loan.presentation.MainActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Lottie Animation View -->
+        <ProgressBar
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:indeterminateTint="@color/orange_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round_bg"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/gray_100" />
+
+    <!-- Info Button -->
+    <ImageButton
+        android:id="@+id/infoButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_round_bg"
+        android:src="@drawable/baseline_question_mark_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/gray_100" />
+
+    <!-- Inner ConstraintLayout with Different Background -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bottomsheet_round_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!-- Title Text -->
+        <LinearLayout
+            android:id="@+id/titleParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/font_h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_btm"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/fontmain"
+                android:gravity="start"
+                android:letterSpacing="0.01"
+                android:text="nikunj, how much you need ?"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Description Text -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_btm"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mainfont_light"
+                android:gravity="start"
+                android:letterSpacing="0.01"
+                android:text="move the dial and set any amount you need up to Rs.40,000"
+                android:textColor="#566976"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selectionParent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/credit_title"
+                style="@style/font_h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_btm"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mainfont_light"
+                android:gravity="start"
+                android:letterSpacing="0.01"
+                android:text="credit amount"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Description Text -->
+            <TextView
+                android:id="@+id/credit_amount"
+                style="@style/font_h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_btm"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/fontmain"
+                android:gravity="start"
+                android:letterSpacing="0.05"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/credit_title"
+                tools:text="₹20,00,000" />
+
+
+            <ImageButton
+                android:id="@+id/downButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="3dp"
+                android:background="@null"
+                android:src="@drawable/baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#FFFFFF" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/white_round_bg"
+            android:gravity="center_vertical"
+            android:maxHeight="200dp"
+            android:minHeight="100dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titleParent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <me.tankery.lib.circularseekbar.CircularSeekBar
+                    android:id="@+id/circular_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/circular_seekbar"
+                    app:layout_constraintEnd_toEndOf="@+id/circular_seekbar"
+                    app:layout_constraintStart_toStartOf="@+id/circular_seekbar"
+                    app:layout_constraintTop_toTopOf="@+id/circular_seekbar">
+
+                    <TextView
+                        android:id="@+id/title_credit_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/mainfont_light"
+                        android:gravity="start"
+                        android:letterSpacing="0.01"
+                        android:text="credit amount"
+                        android:textColor="#566976"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title" />
+
+                    <TextView
+                        android:id="@+id/selected_credit_amonut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/fontmain"
+                        android:gravity="start"
+                        android:letterSpacing="0.01"
+                        android:text="Rs 20,00,000"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/interest_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/fontmain"
+                        android:gravity="start"
+                        android:letterSpacing="0.01"
+                        android:text="\@1.04% monthly"
+                        android:textColor="@color/green_text"
+                        android:textSize="10sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/seekbar_desc"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/mainfont_light"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:text="stash is instant, money will be credited within seconds."
+                android:textColor="#566976"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </LinearLayout>
+
+        <!-- Proceed Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/fontmain"
+            android:id="@+id/button"
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:text="Proceed to EMI selection"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/cta_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

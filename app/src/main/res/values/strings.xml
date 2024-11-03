@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cred</string>
+    <string name="amount_will_be_credited_to_this_account_emi_will_also_be_debited_from_this_bank_account">amount will be credited to this account, EMI will also be debited from this bank account</string>
+    <string name="where_should_we_send_the_money">where should we send the money?</string>
+</resources>

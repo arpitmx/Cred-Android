@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    > <!-- Adjust background color as needed -->
+
+    <!-- Bank Logo Image -->
+    <ImageView
+        android:id="@+id/bank_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/round_img_bg"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bank Name Text -->
+
+    <!-- Account Number Text -->
+    <TextView
+        android:id="@+id/bank_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/fontmain"
+        tools:text="Paytm Payments Bank"
+        android:textColor="#E1FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/bank_logo"
+        app:layout_constraintTop_toTopOf="@id/bank_logo" />
+
+    <TextView
+        android:id="@+id/account_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="9935670475"
+        android:textColor="#A6A6A6"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bank_logo"
+        app:layout_constraintStart_toEndOf="@id/bank_logo"
+        app:layout_constraintTop_toBottomOf="@id/bank_name" />
+
+
+    <ImageView
+        android:id="@+id/check_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="start"
+        android:src="@drawable/baseline_check_circle_24"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/uncheck_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/orange_200" />
+
+    <ImageView
+        android:id="@+id/uncheck_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="start"
+        android:src="@drawable/baseline_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#63FFFFFF" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
